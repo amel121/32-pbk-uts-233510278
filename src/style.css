@@ -1,79 +1,120 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+.container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(220, 151, 232, 0.8); 
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(64, 49, 49, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  text-align: center;
+  color: #9342a1; 
+  margin-bottom: 25px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  flex: 1;
+  width: 100%; 
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid #87659d;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  max-width: 500px;
+  box-sizing: border-box; 
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #a32bac; 
+  box-shadow: 0 0 5px #da41bb;
+}
+
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 12px 24px;
+  background-color: #6a1b9a; 
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.3s ease;
 }
+
 button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  background-color: #ab47bc; 
 }
 
-.card {
-  padding: 2em;
-}
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.filters {
+  margin-bottom: 20px;
   text-align: center;
+  font-size: 15px;
+  color: #6a1b9a;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.filters select {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #a32bac;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #6a1b9a;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background: #c751e8; 
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: translateY(-2px);
+}
+
+.done {
+  text-decoration: line-through;
+  color: #010101; 
+  flex-grow: 1;
+}
+
+.cancel-btn {
+  background: #c819b7; 
+  color: rgb(235, 229, 229);
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 470px;
+}
+
+.cancel-btn:hover {
+  background: #3f1439; 
 }
